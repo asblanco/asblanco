@@ -22,7 +22,7 @@ const AboutWork: React.FC = () => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="bg-gradient-to-br from-purple-100 via-pink-50 to-blue-50 py-20 relative overflow-hidden"
     >
@@ -36,26 +36,26 @@ const AboutWork: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className={`grid lg:grid-cols-3 gap-16 items-start transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          
+
           {/* Left Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Small title */}
             <p className="text-purple-600 font-medium text-sm uppercase tracking-wider">
               About my work
             </p>
-            
+
             {/* Main title */}
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
               8+ years of experience
               <span className="block text-purple-700">as a developer</span>
             </h2>
-            
+
             {/* Description */}
             <p className="text-gray-600 text-lg leading-relaxed max-w-lg">
-              I am a front-end developer with a strong foundation in design, 
+              I am a front-end developer with a strong foundation in design,
               which leads to better user experiences in less time.
             </p>
-            
+
             {/* Skills sections */}
             <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-12 mt-16">
               {/* Frontend Development */}
@@ -64,14 +64,11 @@ const AboutWork: React.FC = () => {
                   FRONT-END DEVELOPMENT
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  I have extensive knowledge of HTML, CSS & JavaScript (ES6), TypeScript and experience with the 
-                  3 most popular frameworks (React, Vue & Angular*). Add ambition, endless curiosity and a 
+                  I have extensive knowledge of HTML, CSS & JavaScript (ES6), TypeScript and experience with the
+                  3 most popular frameworks (React, Vue & Angular*). Add ambition, endless curiosity and a
                   GTD-mindset and you have a pretty complete picture of me.
                 </p>
-                <p className="text-gray-500 text-xs italic">
-                  *I'm not taking on jobs involving Angular or Vue at the moment, sorry!
-                </p>
-                
+
                 {/* Tech stack icons */}
                 <div className="flex items-center space-x-3 mt-4">
                   <div className="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center">
@@ -91,31 +88,34 @@ const AboutWork: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Digital Designer */}
               <div className="space-y-4">
                 <h3 className="font-semibold text-gray-900 text-lg">
-                  DIGITAL DESIGNER
+                  FULL-STACK DEVELOPMENT
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  I speak the designer mumbo-jumbo and dare to make design decisions while coding. This saves 
-                  valuable development time, endless ping-ponging with designers and often looks even better than the 
-                  original design. I also do not hesitate to work out something in Figma or Sketch myself.
+                  I speak the backend language and make API design decisions while coding. This saves
+                  valuable development time, endless back-and-forth with backend teams and often results in more robust
+                  solutions than the original spec. I also do not hesitate to dive into databases, microservices, or performance optimization myself.
                 </p>
-                
+
                 {/* Design tools */}
                 <div className="flex items-center space-x-3 mt-4">
-                  <div className="w-8 h-8 bg-purple-600 rounded flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">F</span>
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <img src="/Kotlin_Icon.png" alt="Kotlin" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-8 h-8 bg-orange-500 rounded flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">S</span>
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <img src="/neo4j_logo.png" alt="Neo4j" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <img src="/terraform_logo.png" alt="Terraform" className="w-full h-full object-contain" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Right side - Decorative mockups */}
           <div className="relative">
             {/* Main mockup */}
@@ -136,7 +136,7 @@ const AboutWork: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Secondary mockup */}
             <div className="absolute -top-8 -right-8 bg-white rounded-lg shadow-md p-4 w-32 transform -rotate-12">
               <div className="w-8 h-8 bg-yellow-400 rounded-full mx-auto mb-2"></div>
