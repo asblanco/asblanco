@@ -2,9 +2,17 @@ import { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -32,7 +40,13 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Left Side Content - starting from bottom of black circle */}
-          <div className={`absolute left-0 bottom-20 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+          <div
+            className={`absolute left-0 bottom-20 ${isVisible ? 'opacity-100' : 'opacity-0 -translate-x-8'}`}
+            style={{
+              transform: isVisible ? `translateX(${scrollY * -1.5}px)` : 'translateX(-32px)',
+              transition: isVisible ? 'none' : 'all 1000ms 300ms'
+            }}
+          >
             <div className="text-left max-w-md">
               <p className="text-gray-600 text-lg leading-relaxed">
                 I'm a Sr. Software Engineer specialising in frontend and fullstack development.
@@ -75,7 +89,13 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Right Side Content - starting from top right */}
-          <div className={`absolute right-0 top-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+          <div
+            className={`absolute right-0 top-16 ${isVisible ? 'opacity-100' : 'opacity-0 translate-x-8'}`}
+            style={{
+              transform: isVisible ? `translateX(${scrollY * 1.5}px)` : 'translateX(32px)',
+              transition: isVisible ? 'none' : 'all 1000ms 500ms'
+            }}
+          >
             <div className="text-right">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-none">
                 Andrea
