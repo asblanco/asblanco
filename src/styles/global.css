@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Custom styles */
+.font-inter {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
