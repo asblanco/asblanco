@@ -50,8 +50,6 @@ const Footer: React.FC<FooterProps> = ({
   navigation = [
     { label: "Blog", href: "./blog" },
     { label: "Contact me", href: "#contact" },
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" }
   ],
   legal = {
     copyrightName: personalInfo.name,
@@ -186,7 +184,7 @@ const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             &copy; {currentYear} {legal.copyrightName}. All rights reserved.
           </p>

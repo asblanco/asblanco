@@ -74,17 +74,11 @@ const AboutWork: React.FC = () => {
                   <div className="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center">
                     <span className="text-black font-bold text-xs">JS</span>
                   </div>
-                  <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">TS</span>
+                  <div className="w-8 h-8 rounded flex items-center justify-center">
+                    <img src="/ts_logo.png" alt="TypeScript" className="w-full h-full object-contain" />
                   </div>
-                  <div className="w-8 h-8 bg-cyan-400 rounded flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">⚛</span>
-                  </div>
-                  <div className="w-8 h-8 bg-gray-600 rounded flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">V</span>
-                  </div>
-                  <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">A</span>
+                  <div className="w-8 h-8 rounded flex items-center justify-center">
+                    <img src="/React_icon.png" alt="React" className="w-full h-full object-contain" />
                   </div>
                 </div>
               </div>
