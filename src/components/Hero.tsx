@@ -21,16 +21,16 @@ const Hero: React.FC = () => {
       {/* Main Content Container */}
       <div className="max-w-7xl mx-auto px-8 pt-20 pb-20">
 
-        {/* Centered Layout with circles as focal point */}
-        <div className="flex items-end justify-center min-h-[70vh] relative pb-16">
+        {/* Responsive Layout */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-center min-h-[70vh] relative pb-16">
 
           {/* Central Profile Image with Geometric Shapes */}
-          <div className={`relative w-80 h-80 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className={`relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto lg:mx-0 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             {/* Large dark geometric shape behind */}
-            <div className="absolute top-0 left-0 w-72 h-72 bg-gray-900 rounded-full"></div>
+            <div className="absolute top-0 left-0 w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 bg-gray-900 rounded-full"></div>
 
             {/* Profile image container overlapping */}
-            <div className="absolute top-16 left-16 w-56 h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
+            <div className="absolute top-8 left-8 w-32 h-32 md:top-12 md:left-12 md:w-40 md:h-40 lg:top-16 lg:left-16 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
               {/* Andrea LEGO Image */}
               <img
                 src="./AndreaLego.png"
@@ -40,16 +40,16 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Left Side Content - starting from bottom of black circle */}
+          {/* Left Side Content - Mobile: below image, Desktop: left side */}
           <div
-            className={`absolute left-0 bottom-20 ${isVisible ? 'opacity-100' : 'opacity-0 -translate-x-8'}`}
+            className={`mt-8 lg:mt-0 lg:absolute lg:left-0 lg:bottom-20 ${isVisible ? 'opacity-100' : 'opacity-0 lg:-translate-x-8'}`}
             style={{
-              transform: isVisible ? `translateX(${scrollY * -1.5}px)` : 'translateX(-32px)',
+              transform: isVisible && typeof window !== 'undefined' && window.innerWidth >= 1024 ? `translateX(${scrollY * -1.5}px)` : 'translateX(0)',
               transition: isVisible ? 'none' : 'all 1000ms 300ms'
             }}
           >
-            <div className="text-left max-w-md">
-              <p className="text-gray-600 text-lg leading-relaxed">
+            <div className="text-center lg:text-left max-w-md mx-auto lg:mx-0">
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                 I'm a <span className="relative">
                   <span className="text-gray-900 font-medium">Sr. Software Engineer</span>
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600"></span>
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
               <div className="w-full border-t border-dotted border-gray-300 my-6"></div>
 
               {/* Social Links */}
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center justify-center lg:justify-start space-x-4">
                 {/* LinkedIn */}
                 <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
                   <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
@@ -92,16 +92,16 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Side Content - starting from top right */}
+          {/* Right Side Content - Mobile: above image, Desktop: right side */}
           <div
-            className={`absolute right-0 top-16 ${isVisible ? 'opacity-100' : 'opacity-0 translate-x-8'}`}
+            className={`order-first lg:order-none mb-8 lg:mb-0 lg:absolute lg:right-0 lg:top-16 ${isVisible ? 'opacity-100' : 'opacity-0 lg:translate-x-8'}`}
             style={{
-              transform: isVisible ? `translateX(${scrollY * 1.5}px)` : 'translateX(32px)',
+              transform: isVisible && typeof window !== 'undefined' && window.innerWidth >= 1024 ? `translateX(${scrollY * 1.5}px)` : 'translateX(0)',
               transition: isVisible ? 'none' : 'all 1000ms 500ms'
             }}
           >
-            <div className="text-right">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-none">
+            <div className="text-center lg:text-right">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-gray-900 leading-tight lg:leading-none">
                 Andrea
                 <br />
                 Sánchez Blanco
@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
               <div className="w-full border-t border-dotted border-gray-300 mt-4"></div>
 
               {/* Location */}
-              <div className="flex items-center justify-end mt-4">
+              <div className="flex items-center justify-center lg:justify-end mt-4">
                 <svg className="w-4 h-4 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
