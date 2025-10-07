@@ -107,9 +107,14 @@ const CurriculumVitae: React.FC = () => {
               </div>
               
               <div className="flex-shrink-0 self-end lg:mb-0">
-                <button className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-medium hover:bg-purple-50 transition-colors">
-                  Download Full CV
-                </button>
+                <a 
+                  href="./Andrea_CV_2025.pdf" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-medium hover:bg-purple-50 transition-colors inline-block text-center"
+                >
+                  View Full CV
+                </a>
               </div>
             </div>
           </div>
@@ -319,9 +324,14 @@ const CurriculumVitae: React.FC = () => {
             <p className="text-gray-600 mb-4">
               Want to see more details about my experience?
             </p>
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors">
-              Download Full CV
-            </button>
+            <a 
+              href="./Andrea_CV_2025.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors inline-block"
+            >
+              View Full CV
+            </a>
           </div>
         </div>
       </div>
