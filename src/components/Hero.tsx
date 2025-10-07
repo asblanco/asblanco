@@ -85,6 +85,16 @@ const Hero: React.FC = () => {
 
               {/* Dotted line extending toward center */}
               <div className="w-full border-t border-dotted border-gray-300 mt-4"></div>
+
+              {/* Location */}
+              <div className="flex items-center justify-end mt-4">
+                <svg className="w-4 h-4 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <p className="text-gray-500 text-base font-light">
+                  Munich, Germany
+                </p>
+              </div>
             </div>
           </div>
         </div>
