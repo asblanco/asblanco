@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
           <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
             <div className="w-4 h-4 bg-white rounded-full"></div>
           </div>
-          <a href="/" className="font-bold text-lg text-gray-900 tracking-tight hover:text-purple-600 transition-colors">
+          <a href="/" className="font-bold text-lg text-gray-900 tracking-tight hover:text-purple-600 transition-colors cursor-pointer">
             ANDREA S.B.
           </a>
         </div>
@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
         <div>
           <a 
             href="/blog" 
-            className={`text-sm tracking-wide transition-all duration-300 relative group ${
+            className={`text-sm tracking-wide transition-all duration-300 relative group cursor-pointer ${
               isBlogPage 
                 ? 'text-purple-600 font-bold' 
                 : 'text-gray-900 font-medium hover:text-purple-600'
