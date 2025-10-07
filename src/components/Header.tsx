@@ -1,3 +1,5 @@
+import GeometricProfileContainer from './GeometricProfileContainer';
+
 interface HeaderProps {
   currentPage?: 'home' | 'blog';
 }
@@ -10,9 +12,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
       <nav className="max-w-7xl mx-auto px-8 py-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
-            <div className="w-4 h-4 bg-white rounded-full"></div>
-          </div>
+          <GeometricProfileContainer size="sm">
+            <div className="w-full h-full rounded-full"></div>
+          </GeometricProfileContainer>
           <a href="./" className="font-bold text-lg text-gray-900 tracking-tight hover:text-purple-600 transition-colors cursor-pointer">
             ANDREA S.B.
           </a>

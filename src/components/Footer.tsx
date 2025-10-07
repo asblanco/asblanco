@@ -1,4 +1,5 @@
 import { socialLinks, personalInfo } from '../config/socialLinks';
+import GeometricProfileContainer from './GeometricProfileContainer';
 
 interface FooterProps {
   brand?: {
@@ -63,16 +64,16 @@ const Footer: React.FC<FooterProps> = ({
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-800 text-white py-16">
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 items-start">
 
           {/* Left: Brand/Name */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className={`w-10 h-10 bg-gradient-to-br ${brand.logoGradient} rounded-full flex items-center justify-center`}>
-                <div className="w-5 h-5 bg-white rounded-full"></div>
-              </div>
+              <GeometricProfileContainer size="sm">
+                <div className="w-full h-full rounded-full"></div>
+              </GeometricProfileContainer>
               <span className="font-bold text-xl text-white tracking-tight">
                 {brand.name}
               </span>

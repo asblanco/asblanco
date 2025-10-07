@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { socialLinks } from '../config/socialLinks';
+import GeometricProfileContainer from './GeometricProfileContainer';
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,20 +26,14 @@ const Hero: React.FC = () => {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-center min-h-[70vh] relative pb-16">
 
           {/* Central Profile Image with Geometric Shapes */}
-          <div className={`relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto lg:mx-0 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            {/* Large dark geometric shape behind */}
-            <div className="absolute top-0 left-0 w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 bg-gray-900 rounded-full"></div>
-
-            {/* Profile image container overlapping */}
-            <div className="absolute top-8 left-8 w-32 h-32 md:top-12 md:left-12 md:w-40 md:h-40 lg:top-16 lg:left-16 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
-              {/* Andrea LEGO Image */}
-              <img
-                src="./AndreaLego.png"
-                alt="Andrea S.B. - LEGO Character"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+          <GeometricProfileContainer size="lg" isVisible={isVisible}>
+            {/* Andrea LEGO Image */}
+            <img
+              src="./AndreaLego.png"
+              alt="Andrea S.B. - LEGO Character"
+              className="w-full h-full object-cover"
+            />
+          </GeometricProfileContainer>
 
           {/* Left Side Content - Mobile: below image, Desktop: left side */}
           <div

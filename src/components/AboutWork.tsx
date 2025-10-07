@@ -65,8 +65,8 @@ const AboutWork: React.FC = () => {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   I have extensive knowledge of HTML, CSS & JavaScript (ES6), TypeScript and experience with the
-                  3 most popular frameworks (React, Vue & Angular*). Add ambition, endless curiosity and a
-                  GTD-mindset and you have a pretty complete picture of me.
+                  3 most popular frameworks (React, Vue & Angular*). I bring a curious mindset and systematic
+                  approach to problem-solving that drives continuous learning and effective project delivery.
                 </p>
 
                 {/* Tech stack icons */}
