@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             <div className="absolute top-16 left-16 w-56 h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
               {/* Andrea LEGO Image */}
               <img
-                src="/AndreaLego.png"
+                src="./AndreaLego.png"
                 alt="Andrea S.B. - LEGO Character"
                 className="w-full h-full object-cover"
               />

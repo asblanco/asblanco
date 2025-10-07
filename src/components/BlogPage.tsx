@@ -98,7 +98,7 @@ const BlogPage: React.FC = () => {
                   </div>
                   
                   <h2 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                    <a href={`/blog/${post.slug}`} className="hover:underline">
+                    <a href={`./blog/${post.slug}`} className="hover:underline">
                       {post.title}
                     </a>
                   </h2>
@@ -121,7 +121,7 @@ const BlogPage: React.FC = () => {
                   
                   {/* Read More Link */}
                   <a 
-                    href={`/blog/${post.slug}`}
+                    href={`./blog/${post.slug}`}
                     className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors group"
                   >
                     Read more

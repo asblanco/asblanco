@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({
     medium: socialLinks.medium
   },
   navigation = [
-    { label: "Blog", href: "#blog" },
+    { label: "Blog", href: "./blog" },
     { label: "Contact me", href: "#contact" },
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" }
