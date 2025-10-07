@@ -23,17 +23,19 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-8 pt-20 pb-20">
 
         {/* Responsive Layout */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-center min-h-[70vh] relative pb-16">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center min-h-[70vh] relative pb-16">
 
           {/* Central Profile Image with Geometric Shapes */}
-          <GeometricProfileContainer size="lg" isVisible={isVisible}>
+          <div className="lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-10" style={{ top: '55%' }}>
+            <GeometricProfileContainer size="lg" isVisible={isVisible}>
             {/* Andrea LEGO Image */}
-            <img
-              src="./AndreaLego.png"
-              alt="Andrea S.B. - LEGO Character"
-              className="w-full h-full object-cover"
-            />
-          </GeometricProfileContainer>
+              <img
+                src="./AndreaLego.png"
+                alt="Andrea S.B. - LEGO Character"
+                className="w-full h-full object-cover"
+              />
+            </GeometricProfileContainer>
+          </div>
 
           {/* Left Side Content - Mobile: below image, Desktop: left side */}
           <div
