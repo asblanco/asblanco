@@ -91,17 +91,27 @@ const CurriculumVitae: React.FC = () => {
           
           {/* Header */}
           <div className="mb-16">
-            <p className="text-purple-600 font-medium text-sm uppercase tracking-wider mb-4">
-              Curriculum vitae
-            </p>
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight max-w-4xl">
-              I've worked on many different domains for{' '}
-              <span className="text-purple-700">international organizations</span>
-            </h2>
-            <p className="text-gray-600 text-lg mt-6 max-w-2xl">
-              From international startups to large organizations such as the 
-              Spanish Railways and major tech companies.
-            </p>
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8">
+              <div className="flex-1">
+                <p className="text-purple-600 font-medium text-sm uppercase tracking-wider mb-4">
+                  Curriculum vitae
+                </p>
+                <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight max-w-4xl">
+                  I've worked on many different domains for{' '}
+                  <span className="text-purple-700">international organizations</span>
+                </h2>
+                <p className="text-gray-600 text-lg mt-6 max-w-2xl">
+                  From international startups to large organizations such as the 
+                  Spanish Railways and major tech companies.
+                </p>
+              </div>
+              
+              <div className="flex-shrink-0 self-end lg:mb-0">
+                <button className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-medium hover:bg-purple-50 transition-colors">
+                  Download Full CV
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Experience List */}

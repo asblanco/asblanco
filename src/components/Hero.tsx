@@ -49,7 +49,10 @@ const Hero: React.FC = () => {
           >
             <div className="text-left max-w-md">
               <p className="text-gray-600 text-lg leading-relaxed">
-                I'm a Sr. Software Engineer specialising in frontend and fullstack development.
+                I'm a <span className="relative">
+                  <span className="text-gray-900 font-medium">Sr. Software Engineer</span>
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600"></span>
+                </span> specialising in frontend and fullstack development.
               </p>
 
               {/* Dotted line extending toward center */}
