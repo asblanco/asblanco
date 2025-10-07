@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CursorTrail from "../components/CursorTrail";
+import BlogPage from "../components/BlogPage";
+import { personalInfo } from "../config/socialLinks";
+---
+
+<Layout title={`Blog - ${personalInfo.name}`}>
+  <CursorTrail client:load />
+  <Header client:load />
+  <BlogPage client:load />
+  <Footer client:load />
+</Layout>
