@@ -90,12 +90,39 @@ const CurriculumVitae: React.FC = () => {
       period: "2014 - 2016",
       thesis: {
         title: "Development of hybrid mobile applications using Ionic Framework",
-        description: "Graded 5/5, available in theseus.fi. Study of the advantages and disadvantages of web-based hybrid apps."
+        description: "Graded 5/5, available in",
+        link: {
+          text: "theseus.fi",
+          url: "https://www.theseus.fi/handle/10024/114145"
+        }
       },
       additional: {
         title: "Focus Area",
         description: "Mobile Application Development, Hybrid Technologies, Cross-platform Development"
       }
+    }
+  ];
+
+  const certifications = [
+    {
+      id: 1,
+      logo: "./microsoft_logo.png",
+      logoColor: "bg-white",
+      title: "Networking Fundamentals",
+      issuer: "Microsoft MTA",
+      issued: "November 2016",
+      credentialId: null,
+      tags: ["MTA Networking Fundamentals"]
+    },
+    {
+      id: 2,
+      logo: "./microsoft_logo.png",
+      logoColor: "bg-white",
+      title: "Networking Fundamentals",
+      issuer: "Microsoft MTA",
+      issued: "September 2014",
+      credentialId: "E966-5292",
+      tags: ["MTA Networking Fundamentals"]
     }
   ];
 
@@ -261,6 +288,20 @@ const CurriculumVitae: React.FC = () => {
                       <p className="text-gray-700 text-sm">
                         <strong>{edu.thesis.title}</strong><br />
                         {edu.thesis.description}
+                        {edu.thesis.link && (
+                          <>
+                            {' '}
+                            <a
+                              href={edu.thesis.link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 underline"
+                            >
+                              {edu.thesis.link.text}
+                            </a>
+                            . Study of the advantages and disadvantages of web-based hybrid apps.
+                          </>
+                        )}
                       </p>
                     </div>
 
@@ -285,45 +326,39 @@ const CurriculumVitae: React.FC = () => {
             </h3>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-sm">MS</span>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900 mb-1">
-                      MTA: Networking Fundamentals - Certified 2016
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-2">Microsoft</p>
-                    <p className="text-gray-500 text-xs">Issued: November 2016</p>
-                    <div className="mt-3">
-                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                        Networking Fundamentals
-                      </span>
+              {certifications.map((cert) => (
+                <div key={cert.id} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <div className="flex items-start space-x-4">
+                    <div className={`w-12 h-12 ${cert.logoColor} rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-200 overflow-hidden`}>
+                      <img
+                        src={cert.logo}
+                        alt={`${cert.issuer} logo`}
+                        className="w-12 h-12 object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        {cert.title}
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-2">{cert.issuer}</p>
+                      <p className="text-gray-500 text-xs">
+                        Issued: {cert.issued}
+                        {cert.credentialId && ` • Credential ID: ${cert.credentialId}`}
+                      </p>
+                      <div className="mt-3">
+                        {cert.tags.map((tag, index) => (
+                          <span
+                            key={index}
+                            className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-sm">MS</span>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900 mb-1">
-                      Microsoft MTA
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-2">Microsoft</p>
-                    <p className="text-gray-500 text-xs">Issued: September 2014 • Credential ID: E966-5292</p>
-                    <div className="mt-3">
-                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                        Microsoft Technology Associate
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
