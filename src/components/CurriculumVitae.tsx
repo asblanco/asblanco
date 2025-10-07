@@ -22,8 +22,8 @@ const CurriculumVitae: React.FC = () => {
   const experiences: Experience[] = [
     {
       id: 1,
-      logo: "TW",
-      logoColor: "bg-red-600",
+      logo: "./thoughtworks_logo.jpeg",
+      logoColor: "bg-white",
       title: "Senior Consultant Developer",
       company: "ThoughtWorks GmbH",
       location: "Munich, Germany",
@@ -36,8 +36,8 @@ const CurriculumVitae: React.FC = () => {
     },
     {
       id: 2,
-      logo: "PS",
-      logoColor: "bg-blue-600",
+      logo: "./parkside_logo.png",
+      logoColor: "bg-white",
       title: "Software Engineer",
       company: "Parkside Informationstechnologie GmbH",
       location: "Graz, Austria",
@@ -50,8 +50,8 @@ const CurriculumVitae: React.FC = () => {
     },
     {
       id: 3,
-      logo: "UV",
-      logoColor: "bg-green-600",
+      logo: "./uvigo_logo.jpeg",
+      logoColor: "bg-white",
       title: "Computer Infrastructure Scholarship",
       company: "Universidade de Vigo",
       location: "Ourense, Spain",
@@ -82,13 +82,13 @@ const CurriculumVitae: React.FC = () => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="bg-gradient-to-br from-gray-50 to-purple-50 py-20 relative"
     >
       <div className="max-w-6xl mx-auto px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          
+
           {/* Header */}
           <div className="mb-16">
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8">
@@ -101,14 +101,14 @@ const CurriculumVitae: React.FC = () => {
                   <span className="text-purple-700">international organizations</span>
                 </h2>
                 <p className="text-gray-600 text-lg mt-6 max-w-2xl">
-                  From small size companies to international organizations such as 
+                  From small size companies to international organizations such as
                   Mercedes-Benz and major german companies.
                 </p>
               </div>
-              
+
               <div className="flex-shrink-0 self-end lg:mb-0">
-                <a 
-                  href="./Andrea_CV_2025.pdf" 
+                <a
+                  href="./Andrea_CV_2025.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-medium hover:bg-purple-50 transition-colors inline-block text-center"
@@ -122,19 +122,22 @@ const CurriculumVitae: React.FC = () => {
           {/* Experience List */}
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div 
+              <div
                 key={exp.id}
-                className={`bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 ${
-                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-                }`}
+                className={`bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="grid lg:grid-cols-3 gap-8">
-                  
+
                   {/* Left: Logo and Basic Info */}
                   <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 ${exp.logoColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <span className="text-white font-bold text-sm">{exp.logo}</span>
+                    <div className={`w-12 h-12 ${exp.logoColor} rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-200 overflow-hidden`}>
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        className="w-12 h-12 object-cover rounded-lg"
+                      />
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold text-gray-900 text-lg leading-tight mb-2">
@@ -156,7 +159,7 @@ const CurriculumVitae: React.FC = () => {
                     <p className="text-gray-900 font-medium text-sm mb-4">
                       {exp.role}
                     </p>
-                    
+
                     <div className="space-y-3">
                       <div>
                         <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-1">
@@ -164,7 +167,7 @@ const CurriculumVitae: React.FC = () => {
                         </h5>
                         <p className="text-gray-700 text-sm">{exp.languages}</p>
                       </div>
-                      
+
                       <div>
                         <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                           Frameworks
@@ -194,7 +197,7 @@ const CurriculumVitae: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Education
             </h3>
-            
+
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div className="grid lg:grid-cols-3 gap-6">
@@ -210,17 +213,17 @@ const CurriculumVitae: React.FC = () => {
                       <p className="text-gray-500 text-sm">2012 - 2017</p>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
                       Thesis Project
                     </h5>
                     <p className="text-gray-700 text-sm">
-                      <strong>Squizer - Simple Quiz Manager 2017</strong><br/>
+                      <strong>Squizer - Simple Quiz Manager 2017</strong><br />
                       SPA web application to manage and generate multiple choice tests using Angular 4, Materialize CSS, Django REST framework and PostgreSQL.
                     </p>
                   </div>
-                  
+
                   <div>
                     <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
                       International Experience
@@ -246,17 +249,17 @@ const CurriculumVitae: React.FC = () => {
                       <p className="text-gray-500 text-sm">2014 - 2016</p>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
                       Thesis Project
                     </h5>
                     <p className="text-gray-700 text-sm">
-                      <strong>Development of hybrid mobile applications using Ionic Framework</strong><br/>
+                      <strong>Development of hybrid mobile applications using Ionic Framework</strong><br />
                       Graded 5/5, available in theseus.fi. Study of the advantages and disadvantages of web-based hybrid apps.
                     </p>
                   </div>
-                  
+
                   <div>
                     <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
                       Focus Area
@@ -275,7 +278,7 @@ const CurriculumVitae: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Certifications
             </h3>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4">
@@ -324,8 +327,8 @@ const CurriculumVitae: React.FC = () => {
             <p className="text-gray-600 mb-4">
               Want to see more details about my experience?
             </p>
-            <a 
-              href="./Andrea_CV_2025.pdf" 
+            <a
+              href="./Andrea_CV_2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors inline-block"
