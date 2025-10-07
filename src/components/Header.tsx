@@ -1,4 +1,10 @@
-const Header: React.FC = () => {
+interface HeaderProps {
+  currentPage?: 'home' | 'blog';
+}
+
+const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
+  const isBlogPage = currentPage === 'blog';
+
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <nav className="max-w-7xl mx-auto px-8 py-8 flex justify-between items-center">
@@ -16,9 +22,15 @@ const Header: React.FC = () => {
         <div>
           <a 
             href="/blog" 
-            className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide"
+            className={`text-sm tracking-wide transition-all duration-300 relative group ${
+              isBlogPage 
+                ? 'text-purple-600 font-bold' 
+                : 'text-gray-900 font-medium hover:text-purple-600'
+            }`}
           >
             BLOG
+            {/* Underline effect - only on hover */}
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform transition-all duration-300 scale-x-0 group-hover:scale-x-100"></span>
           </a>
         </div>
       </nav>

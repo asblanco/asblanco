@@ -7,7 +7,7 @@ import { personalInfo } from "../config/socialLinks";
 ---
 
 <Layout title={`Blog - ${personalInfo.name}`}>
-  <Header client:load />
+  <Header currentPage="blog" client:load />
   <BlogPage client:load />
   <Footer client:load />
 </Layout>
