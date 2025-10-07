@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import AboutWork from "../components/AboutWork";
+import CurriculumVitae from "../components/CurriculumVitae";
 ---
 
 <Layout title="Andrea Sánchez Blanco - Sr. Software Engineer">
@@ -10,5 +11,6 @@ import AboutWork from "../components/AboutWork";
   <main>
     <Hero client:load />
     <AboutWork client:load />
+    <CurriculumVitae client:load />
   </main>
 </Layout>
