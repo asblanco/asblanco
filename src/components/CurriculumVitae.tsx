@@ -25,25 +25,25 @@ const CurriculumVitae: React.FC = () => {
       logo: "TW",
       logoColor: "bg-red-600",
       title: "Senior Consultant Developer",
-      company: "ThoughtWorks, Munich, Germany",
+      company: "ThoughtWorks GmbH",
       location: "Munich, Germany",
       period: "August 2019 – July 2025",
-      technologies: "Full Stack Development, TDD, Pairing, Trunk-based Development, Agile",
-      role: "Worked for several automotive clients, full stack, using latest programming practices like pairing, trunk based development, test driven development (TDD) and agile methodologies. Participated in the Tech Lead Development Programme (TLDP) from May to June 2022.",
-      languages: "JavaScript, TypeScript, Java, Python",
-      frameworks: "React, Spring Boot, Node.js",
-      tooling: "TDD, Pairing, Trunk-based Development, CI/CD, Agile methodologies"
+      technologies: "",
+      role: "Full-stack developer working on cross-functional teams",
+      languages: "JavaScript/TS, Kotlin, Neo4j",
+      frameworks: "React, Spring Boot, Ktor",
+      tooling: "TDD, Pairing, , CI/CD, Agile methodologies"
     },
     {
       id: 2,
       logo: "PS",
       logoColor: "bg-blue-600",
       title: "Software Engineer",
-      company: "Parkside, Graz, Austria",
+      company: "Parkside Informationstechnologie GmbH",
       location: "Graz, Austria",
       period: "August 2017 – June 2019",
-      technologies: "ReactJS, Redux, Sagas, TypeScript, Typo3, Docker, Kubernetes",
-      role: "Frontend Developer worked with: grawe.at using Typo3, Composer, SASS, Gulp, jQuery, Bootstrap, Docker, and rollingpin.at using ReactJS, Redux, Sagas, Typescript, Bootstrap, Kubernetes, ElasticSearch.",
+      technologies: "",
+      role: "Frontend developer",
       languages: "JavaScript, TypeScript, PHP, HTML, CSS/SASS",
       frameworks: "ReactJS, Redux, Typo3, jQuery, Bootstrap",
       tooling: "Docker, Kubernetes, ElasticSearch, Gulp, Composer"
@@ -53,11 +53,11 @@ const CurriculumVitae: React.FC = () => {
       logo: "UV",
       logoColor: "bg-green-600",
       title: "Computer Infrastructure Scholarship",
-      company: "Universidade de Vigo, Ourense, Spain",
+      company: "Universidade de Vigo",
       location: "Ourense, Spain",
       period: "November 2015 – July 2016",
-      technologies: "System Administration, Hardware/Software Troubleshooting, IT Support",
-      role: "Worked with two IT university employees, responsible for fixing the computer related problems that arised on campus. My tasks during the placement were to format, configure, scan for viruses, fix possible software or hardware harms and install software like the official university antivirus into computers, among others PC related activities.",
+      technologies: "",
+      role: "Responsible for fixing the computer related problems that arised on campus.",
       languages: "System Administration, Technical Support",
       frameworks: "Windows, Linux, Antivirus Systems",
       tooling: "Hardware diagnostics, System imaging, Network troubleshooting"
@@ -97,12 +97,12 @@ const CurriculumVitae: React.FC = () => {
                   Curriculum vitae
                 </p>
                 <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight max-w-4xl">
-                  I've worked on many different domains for{' '}
+                  I've worked on several different domains for{' '}
                   <span className="text-purple-700">international organizations</span>
                 </h2>
                 <p className="text-gray-600 text-lg mt-6 max-w-2xl">
-                  From international startups to large organizations such as the 
-                  Spanish Railways and major tech companies.
+                  From small size companies to international organizations such as 
+                  Mercedes-Benz and major german companies.
                 </p>
               </div>
               
@@ -140,7 +140,7 @@ const CurriculumVitae: React.FC = () => {
                       <h3 className="font-semibold text-gray-900 text-lg leading-tight mb-2">
                         {exp.title}
                       </h3>
-                      <p className="text-gray-600 text-sm mb-1">{exp.company}</p>
+                      <p className="text-gray-600 text-sm mb-1">{exp.company} ({exp.location})</p>
                       <p className="text-gray-500 text-sm">{exp.period}</p>
                       <p className="text-gray-400 text-xs mt-2 leading-relaxed">
                         {exp.technologies}
@@ -226,7 +226,7 @@ const CurriculumVitae: React.FC = () => {
                       International Experience
                     </h5>
                     <p className="text-gray-700 text-sm">
-                      Awarded with ISEP scholarship for a one-year exchange program in California State University East Bay (CSUEB), California, USA during 2016 - 2017.
+                      Spent 1 year in California State University East Bay (CSUEB), during 2016 - 2017.
                     </p>
                   </div>
                 </div>
