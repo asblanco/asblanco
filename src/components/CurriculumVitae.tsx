@@ -22,59 +22,45 @@ const CurriculumVitae: React.FC = () => {
   const experiences: Experience[] = [
     {
       id: 1,
-      logo: "AS",
-      logoColor: "bg-blue-600",
-      title: "Lead front-end developer, freelance",
-      company: "Acme Software Solutions, Madrid",
-      location: "Madrid",
-      period: "June 2023 – now",
-      technologies: "Astro, TypeScript, React, Vite, Storybook, Tailwind",
-      role: "Front-end developer (primary), designer & scrum master",
-      languages: "TypeScript, JavaScript, HTML, CSS/Sass/BEM",
-      frameworks: "React, Vue, Angular",
-      tooling: "Vite, Turbo repo, Nx, Webpack, Babel and more"
+      logo: "TW",
+      logoColor: "bg-red-600",
+      title: "Senior Consultant Developer",
+      company: "ThoughtWorks, Munich, Germany",
+      location: "Munich, Germany",
+      period: "August 2019 – July 2025",
+      technologies: "Full Stack Development, TDD, Pairing, Trunk-based Development, Agile",
+      role: "Worked for several automotive clients, full stack, using latest programming practices like pairing, trunk based development, test driven development (TDD) and agile methodologies. Participated in the Tech Lead Development Programme (TLDP) from May to June 2022.",
+      languages: "JavaScript, TypeScript, Java, Python",
+      frameworks: "React, Spring Boot, Node.js",
+      tooling: "TDD, Pairing, Trunk-based Development, CI/CD, Agile methodologies"
     },
     {
       id: 2,
-      logo: "TS",
-      logoColor: "bg-red-500",
-      title: "Senior front-end developer, freelance",
-      company: "Tech Startup Solutions, Barcelona",
-      location: "Barcelona",
-      period: "November 2022 – June 2023",
-      technologies: "TypeScript, React, GraphQL, Apollo Server, Testing Library",
-      role: "Front-end developer (primary), designer & scrum master",
-      languages: "TypeScript, JavaScript, HTML, CSS/Sass/BEM",
-      frameworks: "React, Vue, Angular",
-      tooling: "Vite, Turbo repo, Nx, Webpack, Babel and more"
+      logo: "PS",
+      logoColor: "bg-blue-600",
+      title: "Software Engineer",
+      company: "Parkside, Graz, Austria",
+      location: "Graz, Austria",
+      period: "August 2017 – June 2019",
+      technologies: "ReactJS, Redux, Sagas, TypeScript, Typo3, Docker, Kubernetes",
+      role: "Frontend Developer worked with: grawe.at using Typo3, Composer, SASS, Gulp, jQuery, Bootstrap, Docker, and rollingpin.at using ReactJS, Redux, Sagas, Typescript, Bootstrap, Kubernetes, ElasticSearch.",
+      languages: "JavaScript, TypeScript, PHP, HTML, CSS/SASS",
+      frameworks: "ReactJS, Redux, Typo3, jQuery, Bootstrap",
+      tooling: "Docker, Kubernetes, ElasticSearch, Gulp, Composer"
     },
     {
       id: 3,
-      logo: "CN",
-      logoColor: "bg-blue-700",
-      title: "Senior front-end developer, freelance",
-      company: "CloudNative, Silicon Valley (US) - Remote",
-      location: "Remote",
-      period: "August 2021 – July 2022",
-      technologies: "TypeScript, React, Testing Library/Jest, Cypress",
-      role: "Front-end developer (primary), designer & scrum master",
-      languages: "TypeScript, JavaScript, HTML, CSS/Sass/BEM",
-      frameworks: "React, Vue, Angular",
-      tooling: "Vite, Turbo repo, Nx, Webpack, Babel and more"
-    },
-    {
-      id: 4,
-      logo: "CR",
-      logoColor: "bg-yellow-500",
-      title: "Lead front-end developer @ team Conversion rate optimisation, freelance",
-      company: "Conversion Rate Experts, London",
-      location: "London",
-      period: "March 2020 – August 2021",
-      technologies: "JavaScript, React, A/B Testing, Analytics",
-      role: "Front-end developer (primary), designer & scrum master",
-      languages: "TypeScript, JavaScript, HTML, CSS/Sass/BEM",
-      frameworks: "React, Vue, Angular",
-      tooling: "Vite, Turbo repo, Nx, Webpack, Babel and more"
+      logo: "UV",
+      logoColor: "bg-green-600",
+      title: "Computer Infrastructure Scholarship",
+      company: "Universidade de Vigo, Ourense, Spain",
+      location: "Ourense, Spain",
+      period: "November 2015 – July 2016",
+      technologies: "System Administration, Hardware/Software Troubleshooting, IT Support",
+      role: "Worked with two IT university employees, responsible for fixing the computer related problems that arised on campus. My tasks during the placement were to format, configure, scan for viruses, fix possible software or hardware harms and install software like the official university antivirus into computers, among others PC related activities.",
+      languages: "System Administration, Technical Support",
+      frameworks: "Windows, Linux, Antivirus Systems",
+      tooling: "Hardware diagnostics, System imaging, Network troubleshooting"
     }
   ];
 
@@ -199,32 +185,33 @@ const CurriculumVitae: React.FC = () => {
                 <div className="grid lg:grid-cols-3 gap-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">UPM</span>
+                      <span className="text-white font-bold text-sm">UV</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 text-lg">
-                        Master's in Computer Science
+                        BSc in Computer Science, Software Engineering
                       </h4>
-                      <p className="text-gray-600 text-sm">Universidad Politécnica de Madrid</p>
-                      <p className="text-gray-500 text-sm">2018 - 2020</p>
+                      <p className="text-gray-600 text-sm">Universidade de Vigo, Spain</p>
+                      <p className="text-gray-500 text-sm">2012 - 2017</p>
                     </div>
                   </div>
                   
                   <div>
                     <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
-                      Specialization
+                      Thesis Project
                     </h5>
                     <p className="text-gray-700 text-sm">
-                      Software Engineering & Web Technologies
+                      <strong>Squizer - Simple Quiz Manager 2017</strong><br/>
+                      SPA web application to manage and generate multiple choice tests using Angular 4, Materialize CSS, Django REST framework and PostgreSQL.
                     </p>
                   </div>
                   
                   <div>
                     <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
-                      Key Subjects
+                      International Experience
                     </h5>
                     <p className="text-gray-700 text-sm">
-                      Advanced Web Development, Software Architecture, Database Systems
+                      Awarded with ISEP scholarship for a one-year exchange program in California State University East Bay (CSUEB), California, USA during 2016 - 2017.
                     </p>
                   </div>
                 </div>
@@ -234,15 +221,25 @@ const CurriculumVitae: React.FC = () => {
                 <div className="grid lg:grid-cols-3 gap-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">UC3M</span>
+                      <span className="text-white font-bold text-sm">FI</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 text-lg">
-                        Bachelor's in Computer Engineering
+                        BSc in Information Technology
                       </h4>
-                      <p className="text-gray-600 text-sm">Universidad Carlos III de Madrid</p>
-                      <p className="text-gray-500 text-sm">2014 - 2018</p>
+                      <p className="text-gray-600 text-sm">University of Applied Sciences of Mikkeli, Finland</p>
+                      <p className="text-gray-500 text-sm">2014 - 2016</p>
                     </div>
+                  </div>
+                  
+                  <div>
+                    <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
+                      Thesis Project
+                    </h5>
+                    <p className="text-gray-700 text-sm">
+                      <strong>Development of hybrid mobile applications using Ionic Framework</strong><br/>
+                      Graded 5/5, available in theseus.fi. Study of the advantages and disadvantages of web-based hybrid apps.
+                    </p>
                   </div>
                   
                   <div>
@@ -250,16 +247,7 @@ const CurriculumVitae: React.FC = () => {
                       Focus Area
                     </h5>
                     <p className="text-gray-700 text-sm">
-                      Computer Science & Information Systems
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h5 className="text-gray-500 text-xs uppercase tracking-wider mb-2">
-                      Achievements
-                    </h5>
-                    <p className="text-gray-700 text-sm">
-                      Magna Cum Laude, Dean's List
+                      Mobile Application Development, Hybrid Technologies, Cross-platform Development
                     </p>
                   </div>
                 </div>
@@ -276,78 +264,38 @@ const CurriculumVitae: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-sm">AWS</span>
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-sm">MS</span>
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-900 mb-1">
-                      AWS Certified Solutions Architect
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-2">Amazon Web Services</p>
-                    <p className="text-gray-500 text-xs">Issued: March 2023 • Expires: March 2026</p>
-                    <div className="mt-3">
-                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                        Cloud Architecture
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-sm">⚛</span>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900 mb-1">
-                      React Developer Certification
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-2">Meta (Facebook)</p>
-                    <p className="text-gray-500 text-xs">Issued: January 2023</p>
-                    <div className="mt-3">
-                      <span className="inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">
-                        Frontend Development
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-sm">GCP</span>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900 mb-1">
-                      Google Cloud Professional Developer
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-2">Google Cloud Platform</p>
-                    <p className="text-gray-500 text-xs">Issued: September 2022 • Expires: September 2025</p>
-                    <div className="mt-3">
-                      <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-                        Cloud Development
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-sm">TS</span>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900 mb-1">
-                      TypeScript Advanced Certification
+                      MTA: Networking Fundamentals - Certified 2016
                     </h4>
                     <p className="text-gray-600 text-sm mb-2">Microsoft</p>
-                    <p className="text-gray-500 text-xs">Issued: June 2022</p>
+                    <p className="text-gray-500 text-xs">Issued: November 2016</p>
                     <div className="mt-3">
-                      <span className="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                        Programming Languages
+                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                        Networking Fundamentals
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-sm">MS</span>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Microsoft MTA
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-2">Microsoft</p>
+                    <p className="text-gray-500 text-xs">Issued: September 2014 • Credential ID: E966-5292</p>
+                    <div className="mt-3">
+                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                        Microsoft Technology Associate
                       </span>
                     </div>
                   </div>
