@@ -46,8 +46,7 @@ const CurriculumVitae: React.FC = () => {
                   <span className="text-purple-700">international organizations</span>
                 </h2>
                 <p className="text-gray-600 text-lg mt-6 max-w-2xl">
-                  From small size companies to international organizations such as
-                  Mercedes-Benz and major german companies.
+                  From small size companies to international organizations and major german companies.
                 </p>
               </div>
 

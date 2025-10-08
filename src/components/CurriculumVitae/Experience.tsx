@@ -22,20 +22,34 @@ const Experience: React.FC = () => {
   const experiences: Experience[] = [
     {
       id: 1,
+      logo: "./stackoverflow_logo.png",
+      logoColor: "bg-white",
+      title: "Senior Software Engineer",
+      company: "Stack Overflow",
+      location: "Remote",
+      period: "November 2025 – Present",
+      technologies: "",
+      role: "Full-stack engineer building developer tools and community features",
+      languages: "TypeScript, C#, SQL, JavaScript",
+      frameworks: "React, .NET Core, ASP.NET, Node.js",
+      tooling: "Azure, Docker, Redis, Elasticsearch, Git, CI/CD"
+    },
+    {
+      id: 2,
       logo: "./thoughtworks_logo.jpeg",
       logoColor: "bg-white",
       title: "Senior Consultant Developer",
       company: "ThoughtWorks GmbH",
       location: "Munich, Germany",
-      period: "August 2019 – July 2025",
+      period: "August 2019 – June 2025",
       technologies: "",
       role: "Full-stack developer working on cross-functional teams",
       languages: "JavaScript/TS, Kotlin, Neo4j",
       frameworks: "React, Spring Boot, Ktor",
-      tooling: "TDD, Pairing, , CI/CD, Agile methodologies"
+      tooling: "TDD, Pairing, CI/CD, Agile methodologies"
     },
     {
-      id: 2,
+      id: 3,
       logo: "./parkside_logo.png",
       logoColor: "bg-white",
       title: "Software Engineer",
@@ -49,7 +63,7 @@ const Experience: React.FC = () => {
       tooling: "Docker, Kubernetes, ElasticSearch, Gulp, Composer"
     },
     {
-      id: 3,
+      id: 4,
       logo: "./uvigo_logo.jpeg",
       logoColor: "bg-white",
       title: "Computer Infrastructure Scholarship",
