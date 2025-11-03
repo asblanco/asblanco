@@ -24,7 +24,7 @@ const Experience: React.FC = () => {
       id: 1,
       logo: "./stackoverflow_logo.png",
       logoColor: "bg-white",
-      title: "Senior Software Engineer",
+      title: "Software Engineer",
       company: "Stack Overflow",
       location: "Remote",
       period: "November 2025 – Present",
